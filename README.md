@@ -8,6 +8,10 @@ Explanation of datasets:
 - pdb/ - protein-water structures for the training and validation sets
 - tests/ - protein-water structures for the standard test set
 - new_test/ - protein-water structures for the additional test set
+- training.txt: pdb ids for training set
+- validation.txt: pdb ids for validation set
+- test.txt: pdb ids for standard test set
+- new_test.txt: pdb ids for additional test set
 
 Pre-trained 3D-CNNs are available in ./trained_networks
 To run training:
