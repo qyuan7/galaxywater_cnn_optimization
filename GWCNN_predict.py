@@ -487,5 +487,5 @@ if __name__ == '__main__':
         out_name = sys.argv[2]
         tlog_path ='cpu_time.log'
         nets  = [networks.Net_v4_5_auxloss()]
-        names = ['networks'] 
+        names = ['trained_networks'] 
         predict_path(nets,names,pro_path,out_name,n_grid=64, padding=4.0, build_prefixs=names,dbloss=True,tlog = False)
