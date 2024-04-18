@@ -13,4 +13,4 @@ Pre-trained 3D-CNNs are available in ./trained_networks
 To run training:
 - python GWCNN_gpu.py
 To run prediction:
-- python GWCNN_predict.py
+- python GWCNN_predict.py path_to_input_pdb path_to_output_pdb
