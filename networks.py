@@ -22,8 +22,8 @@ class Net_v4_5_auxloss(nn.Module):
         self.conv6   = atr_res_12(64)
         self.conv7   = atr_res_12(64)
         self.conv8   = atr_res_12(64)
-        self.conv9   = atr_res_12(64)
-        self.conv10  = atr_res_12(64)
+        #self.conv9   = atr_res_12(64)
+        #self.conv10  = atr_res_12(64)
         self.conv_e1 = nn.Conv3d(64, 1, 1) #fc layer
         
         self.conv11   = atr_res_12(64)
@@ -34,8 +34,8 @@ class Net_v4_5_auxloss(nn.Module):
         self.conv16   = atr_res_12(64)
         self.conv17   = atr_res_12(64)
         self.conv18   = atr_res_12(64)
-        self.conv19   = atr_res_12(64)
-        self.conv20  = atr_res_12(64)
+        #self.conv19   = atr_res_12(64)
+        #self.conv20  = atr_res_12(64)
         self.conv_e2 = nn.Conv3d(64, 1, 1) #fc layer
         
     def forward(self, x_init):
@@ -49,8 +49,8 @@ class Net_v4_5_auxloss(nn.Module):
         x = self.conv6(x)
         x = self.conv7(x)
         x = self.conv8(x)
-        x = self.conv9(x)
-        x = self.conv10(x)
+        #x = self.conv9(x)
+        #x = self.conv10(x)
         coarse = self.conv_e1(x) #auxloss only
 
         x = self.conv11(x)
@@ -61,8 +61,8 @@ class Net_v4_5_auxloss(nn.Module):
         x = self.conv16(x)
         x = self.conv17(x)
         x = self.conv18(x)
-        x = self.conv19(x)
-        x = self.conv20(x)
+        #x = self.conv19(x)
+        #x = self.conv20(x)
         fine = self.conv_e2(x)
 
         z = torch.cat((fine,coarse),1)
