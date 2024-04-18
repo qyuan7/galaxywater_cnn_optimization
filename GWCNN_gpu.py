@@ -439,7 +439,7 @@ def training(nets,names ,n_grid=32, build_r=32., build_prefixs = [],dbloss=False
         if torch.cuda.device_count() >1:
             net = nn.DataParallel(net)
         
-        states = glob.glob('%s/cifar_res10lr_32c_from0_new_state_*.bin'%(name))
+        states = glob.glob('%s/model_b_lr*.bin'%(name))
         states.sort()
     
         if len(states) > 0:
@@ -469,7 +469,7 @@ def training(nets,names ,n_grid=32, build_r=32., build_prefixs = [],dbloss=False
             if epoch%50 == 49:
                 #save state:
                 env_train['scheduler'].step()
-                torch.save(net.state_dict(), '%s/cifar_res10lr_32c_from0_new_state_%05d.bin'%(name,(epoch+1)))
+                torch.save(net.state_dict(), '%s/model_b_lr_%05d.bin'%(name,(epoch+1)))
     
         log.close()
         del(log)
