@@ -488,7 +488,7 @@ if __name__ == '__main__':
     # pdb_protein contains protein only PDB files.
     # pdb_water   contains water only PDB files - for training
     nets  = [networks.Net_v4_5_auxloss()]
-    names = ['networks']
+    names = ['trained_networks']
     with open("training.txt") as f1:
         data1 = f1.readlines()
     with open("validation.txt") as f2:
