@@ -437,7 +437,7 @@ def predict_path(nets,names,in_path,out_name,n_grid=64, padding=4.0, build_prefi
         if torch.cuda.device_count() >1:
             #net = nn.DataParallel(net)
             pass
-        states = glob.glob('%s/cifar_res10lr_new_state_*.bin'%(name))
+        states = glob.glob('%s/model_b_lr*.bin'%(name))
         #states = glob.glob('%s/cifar_state_*.bin'%(name))
         states.sort()
     
